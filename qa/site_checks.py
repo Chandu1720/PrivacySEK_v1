@@ -91,7 +91,7 @@ async def main():
         body = await r.text()
         check(r.ok and "<urlset" in body and body.count("<loc>") >= 30, f"sitemap.xml ok ({body.count('<loc>')} urls)")
         for loc in [l.split("</loc>")[0] for l in body.split("<loc>")[1:]]:
-            path = loc.replace("https://secure-your-world-engine.lovable.app", "") or "/"
+            path = loc.replace("https://privacysek.com", "") or "/"
             s = (await page.request.get(BASE + path)).status
             if s != 200: check(False, f"sitemap url {path} -> {s}")
         check(True, "all sitemap urls checked")
