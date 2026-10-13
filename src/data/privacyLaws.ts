@@ -1,0 +1,141 @@
+export interface PrivacyLaw {
+  id: string;
+  country: string;
+  shortName: string;
+  law: string;
+  description: string;
+  source: string;
+  sourceLabel: string;
+  lat: number;
+  lng: number;
+  countryIds: string[];
+}
+
+export const privacyLaws: PrivacyLaw[] = [
+  {
+    id: 'eu',
+    country: 'European Union',
+    shortName: 'EU',
+    law: 'General Data Protection Regulation (GDPR)',
+    description: 'Rules for lawful processing, consent, data minimization, rights, and cross-border transfers across the European Union.',
+    source: 'https://commission.europa.eu/law/law-topic/data-protection_en',
+    sourceLabel: 'European Commission',
+    lat: 50.1109,
+    lng: 8.6821,
+    countryIds: [
+      '040', '056', '100', '191', '196', '203', '208', '233', '246', '250',
+      '276', '300', '348', '372', '380', '428', '440', '442', '470', '528',
+      '616', '620', '642', '703', '705', '724', '752',
+      // Include non-zero padded string matches if any
+      '40', '56',
+    ],
+  },
+  {
+    id: 'us-ca',
+    country: 'United States — California',
+    shortName: 'California',
+    law: 'CCPA and CPRA',
+    description: 'Comprehensive consumer privacy framework establishing rights over personal data collection, sale, sharing, deletion, and opt-out choices.',
+    source: 'https://oag.ca.gov/privacy/ccpa',
+    sourceLabel: 'California Department of Justice',
+    lat: 36.7783,
+    lng: -119.4179,
+    countryIds: ['840'],
+  },
+  {
+    id: 'in',
+    country: 'India',
+    shortName: 'India',
+    law: 'Digital Personal Data Protection Act, 2023 (DPDP Act)',
+    description: 'A national framework for processing digital personal data with notice, consent, data principal rights, and accountability obligations.',
+    source: 'https://www.meity.gov.in/static/uploads/2025/11/53450e6e5dc0bfa85ebd78686cadad39.pdf',
+    sourceLabel: 'Digital Personal Data Protection Act, 2023 (DPDP Act)',
+    lat: 20.5937,
+    lng: 78.9629,
+    countryIds: ['356'],
+  },
+  {
+    id: 'uk',
+    country: 'United Kingdom',
+    shortName: 'UK',
+    law: 'UK GDPR and Data Protection Act 2018',
+    description: 'The UK data protection regime establishing principles for lawful processing, individual rights, security, and supervisory enforcement.',
+    source: 'https://www.gov.uk/data-protection',
+    sourceLabel: 'Information Commissioner’s Office (ICO)',
+    lat: 55.3781,
+    lng: -3.436,
+    countryIds: ['826'],
+  },
+  {
+    id: 'br',
+    country: 'Brazil',
+    shortName: 'Brazil',
+    law: 'Lei Geral de Proteção de Dados (LGPD)',
+    description: 'Brazil’s general data protection law governing processing bases, data subject rights, international transfers, and ANPD enforcement.',
+    source: 'https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm',
+    sourceLabel: 'Presidência da República / ANPD',
+    lat: -14.235,
+    lng: -51.9253,
+    countryIds: ['076', '76'],
+  },
+  {
+    id: 'cn',
+    country: 'China',
+    shortName: 'China',
+    law: 'Personal Information Protection Law (PIPL)',
+    description: 'National framework addressing personal information protection, sensitive data safeguards, cross-border transfers, and processor liabilities.',
+    source: 'https://www.gov.cn/zhengce/2021-08/20/content_5632372.htm',
+    sourceLabel: 'State Council of China / CAC',
+    lat: 35.8617,
+    lng: 104.1954,
+    countryIds: ['156'],
+  },
+  {
+    id: 'au',
+    country: 'Australia',
+    shortName: 'Australia',
+    law: 'Privacy Act 1988 (Australian Privacy Principles)',
+    description: 'Federal statutory privacy principles regulating collection, use, disclosure, storage, and cross-border disclosure of personal information.',
+    source: 'https://www.oaic.gov.au/privacy/your-privacy-rights',
+    sourceLabel: 'Office of the Australian Information Commissioner',
+    lat: -25.2744,
+    lng: 133.7751,
+    countryIds: ['036', '36'],
+  },
+  {
+    id: 'za',
+    country: 'South Africa',
+    shortName: 'South Africa',
+    law: 'Protection of Personal Information Act (POPIA)',
+    description: 'Comprehensive privacy legislation safeguarding processing of personal information by public and private bodies with supervisory oversight.',
+    source: 'https://www.justice.gov.za/inforeg/POPIA/',
+    sourceLabel: 'Information Regulator South Africa',
+    lat: -30.5595,
+    lng: 22.9375,
+    countryIds: ['710'],
+  },
+  {
+    id: 'jp',
+    country: 'Japan',
+    shortName: 'Japan',
+    law: 'Act on the Protection of Personal Information (APPI)',
+    description: 'Japanese data protection regime prescribing obligations on personal information handling business operators, individual rights, and cross-border rules.',
+    source: 'https://www.ppc.go.jp/en/',
+    sourceLabel: 'Personal Information Protection Commission',
+    lat: 36.2048,
+    lng: 138.2529,
+    countryIds: ['392'],
+  },
+  {
+    id: 'sg',
+    country: 'Singapore',
+    shortName: 'Singapore',
+    law: 'Personal Data Protection Act (PDPA)',
+    description: 'A risk-based regulatory framework governing collection, use, disclosure, and care of personal data alongside mandatory breach notifications.',
+    source: 'https://www.pdpc.gov.sg/Overview-of-PDPA/The-PDPA',
+    sourceLabel: 'Personal Data Protection Commission Singapore',
+    lat: 1.3521,
+    lng: 103.8198,
+    countryIds: ['702'],
+  },
+];
